@@ -11,7 +11,27 @@ import SwiftUI
 struct AFP_ListThemAllApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                Tab {
+                    PlacesIveBeenView()
+                } label: {
+                    Image(systemName: "globe")
+                    Text("My Travel")
+                }
+                Tab {
+                    StudentList()
+                } label: {
+                    Image(systemName: "person.3")
+                    Text("Student List")
+                }
+                Tab {
+                    LoginView()
+                } label: {
+                    Image(systemName: "lock.fill")
+                    Text("Own Struct")
+                }
+            }
         }
     }
 }
+
